@@ -1,9 +1,0 @@
-* a zoom level is basically a layer, every element has a level
-* a zoom factor is how much we zoom in or out the elements ( resize them )
-* an element is hidden if out of sky view
-* if element is not hidden, we can zoom it in or out
-* should be able to determine what elements are visible on screen using the zoomFactor to avoid going through all elements and testing if they are hidden or not
-* or maybe make a list of boolean like map<level, visible> and if all elements in that level are hidden, then level is hidden ( we check everythime an element is updated, however saves time for checking when moving around :) )
-
-* every level could have a background
-* a background could also be scaled to screen not the big space ?
