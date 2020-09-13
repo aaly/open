@@ -1,0 +1,30 @@
+#ifndef SCOPEBROWSER_HPP
+#define SCOPEBROWSER_HPP
+
+
+#include "Common.hpp"
+#include "Sky.hpp"
+
+class Sky;
+
+class scopeBrowser : public QWidget
+{
+		Q_OBJECT
+	public:
+        explicit scopeBrowser(Sky *sky);
+		~scopeBrowser();
+		int setSizeFactor(unsigned int size);
+        int updateAttrs();
+		
+	signals:
+		
+	public slots:
+	protected:
+		void paintEvent(QPaintEvent *event);
+	private:
+		Sky* sky;
+		QSize browserBox;
+        QGraphicsOpacityEffect* of;
+};
+
+#endif // SCOPEBROWSER_HPP
