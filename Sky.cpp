@@ -561,6 +561,8 @@ int Sky::processEvents()
     while(true)
     {
         XNextEvent(dpy, &ev);
+        cerr << "Event : " << (int)ev.type  << endl  << flush;
+
         //if (ev.type == KeyRelease || ev.type == KeyPress)
         {
             cout << "Event : " << XEvent_Name[ev.type] << " -> type :" << ev.type  << endl  << flush;

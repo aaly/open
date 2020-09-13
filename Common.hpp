@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+#include <map>
 
 //#include <QLabel>
 #include <QtConcurrent/QtConcurrent>
@@ -222,43 +223,44 @@ static int OnXIOError(Display* display)
 }
 
 
-static const char* XEvent_Name[] = {
-   "",
-   "",
-   "KeyPress",
-   "KeyRelease",
-   "ButtonPress",
-   "ButtonRelease",
-   "MotionNotify",
-   "EnterNotify",
-   "LeaveNotify",
-   "FocusIn",
-   "FocusOut",
-   "KeymapNotify",
-   "Expose",
-   "GraphicsExpose",
-   "NoExpose",
-   "VisibilityNotify",
-   "CreateNotify",
-   "DestroyNotify",
-   "UnmapNotify",
-   "MapNotify",
-   "MapRequest",
-   "ReparentNotify",
-   "ConfigureNotify",
-   "ConfigureRequest",
-   "GravityNotify",
-   "ResizeRequest",
-   "CirculateNotify",
-   "CirculateRequest",
-   "PropertyNotify",
-   "SelectionClear",
-   "SelectionRequest",
+//static const char* XEvent_Name[] = {
+static std::map<int, std::string> XEvent_Name = {{0,""}};
+/*
+   1,"",
+   1,"KeyPress",
+   1,"KeyRelease",
+   1,"ButtonPress",
+   1,"ButtonRelease",
+   1,"MotionNotify",
+   1,"EnterNotify",
+   1,"LeaveNotify",
+   1,"FocusIn",
+   1,"FocusOut",
+   1,"KeymapNotify",
+   1,"Expose",
+   1,"GraphicsExpose",
+   1,"NoExpose",
+   1,"VisibilityNotify",
+   1,"CreateNotify",
+   1,"DestroyNotify",
+   1,"UnmapNotify",
+   1,"MapNotify",
+   1,"MapRequest",
+   1,"ReparentNotify",
+   1,"ConfigureNotify",
+   1,"ConfigureRequest",
+   1,"GravityNotify",
+   1,"ResizeRequest",
+   1,"CirculateNotify",
+   1,"CirculateRequest",
+   1,"PropertyNotify",
+   1,"SelectionClear",
+   1,"SelectionRequest",
    "SelectionNotify",
    "ColormapNotify",
    "ClientMessage",
    "MappingNotify"
-};
+};*/
 
 
 #endif // COMMON_HPP
